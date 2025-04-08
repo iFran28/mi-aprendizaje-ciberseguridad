@@ -1,0 +1,86 @@
+# 📡 Conceptos Básicos de Redes: IP, IP Privada/Pública y Puerta de Enlace
+
+## 🔹 ¿Qué es una IP?
+Una **IP (Internet Protocol)** es una dirección única que identifica a un dispositivo dentro de una red. Es como una dirección postal, pero digital. Sin una IP, un dispositivo no puede comunicarse dentro de una red o hacia internet.
+
+---
+
+## 🔸 Tipos de IP: Pública vs Privada
+
+| Característica      | IP Privada                          | IP Pública                             |
+|---------------------|--------------------------------------|-----------------------------------------|
+| **Uso**             | Dentro de redes locales (LAN)       | Comunicación en internet                |
+| **Visibilidad**     | Solo visible dentro de la red       | Visible desde internet                  |
+| **Ejemplos**        | 192.168.x.x, 10.x.x.x, 172.16.x.x   | 181.30.35.45, 200.55.143.2              |
+| **Asignación**      | Automática por el router (DHCP)     | Asignada por tu proveedor de internet   |
+| **Seguridad**       | Más segura, no accesible desde fuera| Más expuesta a ataques externos         |
+
+> ✅ Los dispositivos de tu red (PC, celulares, impresoras) usan IPs privadas para comunicarse entre ellos. Todos comparten una única IP pública al salir a internet.
+
+---
+
+## 🖥️ Ver IP en CMD (Windows)
+
+### ▶ Ver IP privada:
+```cmd
+ipconfig
+```
+
+Ejemplo de salida:
+```
+Dirección IPv4. . . . . . . . . . : 192.168.1.100
+```
+
+### ▶ Ver IP pública (desde CMD con PowerShell):
+```cmd
+powershell "(Invoke-WebRequest -uri 'https://api.ipify.org').Content"
+```
+
+También podés usar esta web:
+👉 https://whatismyipaddress.com
+
+---
+
+## 🌐 ¿Qué es la Puerta de Enlace Predeterminada?
+
+La **puerta de enlace predeterminada** es la dirección IP del dispositivo (normalmente el router) que conecta tu red local con otras redes, como internet.
+
+> Es la "puerta de salida" de tu red.
+
+### 🧭 Ejemplo:
+- IP privada: `192.168.1.5`
+- Puerta de enlace: `192.168.1.1` → IP del router
+
+---
+
+## 🖥️ Ver Puerta de Enlace en CMD
+
+```cmd
+ipconfig
+```
+
+Salida típica:
+```
+Puerta de enlace predeterminada . . . . . : 192.168.1.1
+```
+
+---
+
+## 🛡️ Recomendaciones de Seguridad
+
+- 🔐 Cambiá la contraseña por defecto del router
+- ⚙️ Desactivá servicios innecesarios (como WPS)
+- 📲 Mantené el firmware del router actualizado
+- 🔥 Usá firewalls correctamente configurados
+
+---
+
+## 📘 Recursos útiles
+
+- [https://whatismyipaddress.com](https://whatismyipaddress.com) – para ver tu IP pública
+- `ipconfig` – comando en CMD para ver detalles de red en Windows
+- `powershell` – para obtener IP pública desde consola
+
+---
+
+> 🧠 Ideal para tu estudio de ciberseguridad, redes y pruebas en entornos como Kali Linux.
